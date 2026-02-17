@@ -1,0 +1,212 @@
+/* ============================= */
+/* CONTACT SECTION */
+/* ============================= */
+.contact-section {
+  padding: 120px 8%;
+  background: linear-gradient(
+    180deg,
+    #1D1E22 0%,
+    #23242A 50%,
+    #1D1E22 100%
+  );
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* CONTACT HEADING (Styled like Projects) */
+/* ============================= */
+.contact-heading {
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FEDA6A;
+  margin-bottom: 20px;  /* reduced for tight spacing */
+  position: relative;
+  display: inline-block;
+}
+
+/* Elegant underline like Projects heading */
+.contact-heading::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #FEDA6A;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+/* ============================= */
+/* EMAIL - CENTERED & TIGHT */
+/* ============================= */
+/* ============================= */
+/* CONTACT HEADING FIX - FULL WIDTH */
+/* ============================= */
+.contact-heading {
+  display: block;       /* forces heading to full width */
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #FEDA6A;
+  margin-bottom: 8px;   /* small spacing to email */
+  position: relative;
+}
+
+/* ============================= */
+/* EMAIL - INLINE UNDERLINE, CENTERED */
+/* ============================= */
+.contact-email {
+  display: inline-block;   /* underline matches text width */
+  font-size: 20px;
+  font-weight: 500;
+  margin: 8px 0;           /* vertical spacing from heading */
+  color: #FEDA6A;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+}
+
+.contact-email::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;             /* closer to text */
+  width: 100%;              /* matches email text */
+  height: 2px;
+  background-color: #FEDA6A;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-email:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* ============================= */
+/* SUBTEXT */
+/* ============================= */
+.contact-subtext {
+  font-size: 15px;
+  color: #A9ABB3;
+  margin-bottom: 40px;   /* slightly smaller for tight spacing */
+  letter-spacing: 0.5px;
+}
+
+/* ============================= */
+/* FORM CARD */
+/* ============================= */
+.contact-form {
+  max-width: 720px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid #393F4D;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Animation delays for sequential fade-in */
+.contact-form:nth-child(1) { animation-delay: 0.2s; }
+.contact-form:nth-child(2) { animation-delay: 0.4s; }
+
+/* ============================= */
+/* INPUT ROW */
+/* ============================= */
+.form-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* INPUTS AND TEXTAREA */
+/* ============================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #393F4D;
+  padding: 12px 6px;
+  font-size: 15px;
+  color: #D4D4DC;
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7D7F88;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: #FEDA6A;
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.contact-form button {
+  margin-top: 40px;
+  padding: 12px 42px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #1D1E22;
+  border: none;
+  letter-spacing: 1px;
+  background-color: #FEDA6A;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(254, 218, 106, 0.35);
+}
+
+/* ============================= */
+/* FADE IN ANIMATION */
+/* ============================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+@media (max-width: 900px) {
+  .contact-section {
+    padding: 80px 30px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-heading {
+    font-size: 28px;
+  }
+}

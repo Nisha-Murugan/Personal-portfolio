@@ -1,0 +1,66 @@
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 170px;
+  background-color: #1D1E22; /* 🔥 DARK BACKGROUND */
+  z-index: 1000;
+}
+
+/* ================= MENU ================= */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+/* ================= LINKS ================= */
+.nav-menu li a {
+  position: relative;
+  text-decoration: none;
+  color: #D4D4DC; /* Silver Fox */
+  padding-bottom: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* ================= UNDERLINE ================= */
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #FEDA6A,
+    #D4D4DC
+  );
+  transition: width 0.35s ease;
+}
+
+/* ================= HOVER ================= */
+.nav-menu li a:hover {
+  background: linear-gradient(
+    90deg,
+    #FEDA6A,
+    #FFFFFF
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= UNDERLINE SHOW ================= */
+.nav-menu li a:hover::after {
+  width: 100%;
+}

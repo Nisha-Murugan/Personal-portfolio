@@ -1,0 +1,144 @@
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 8%;
+  min-height: 100vh;
+  background-color: #1D1E22;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* LEFT SIDE */
+/* ============================= */
+.hero-left {
+  flex: 1;
+  max-width: 540px;
+}
+
+.hero-left h1 {
+  font-size: 62px;
+  font-weight: 700;
+  color: #D4D4DC;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hero-left .name {
+  color: #FEDA6A;
+}
+
+.hero-left h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #A9ABB3;
+}
+
+/* ============================= */
+/* SOCIAL ICONS */
+/* ============================= */
+.hero-social {
+  display: flex;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.hero-social a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #252830;
+  color: #FEDA6A;
+  transition: all 0.3s ease;
+}
+
+.hero-social a:hover {
+  transform: translateY(-4px);
+  background: #FEDA6A;
+  color: #1D1E22;
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 32px;
+  background-color: #FEDA6A;
+  color: #1D1E22;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(254, 218, 106, 0.25);
+}
+
+/* ============================= */
+/* RIGHT SIDE IMAGE */
+/* ============================= */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  width: 380px;          /* Increased size */
+  max-width: 100%;
+  height: auto;          /* No cropping */
+  object-fit: contain;   /* Show full image */
+  border-radius: 22px;
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75);
+  transition: transform 0.4s ease;
+}
+
+.hero-right img:hover {
+  transform: translateY(-6px);
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 48px;
+  }
+
+  .hero-left h2 {
+    font-size: 20px;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .hero-right img {
+    width: 280px;
+    height: auto;
+  }
+}

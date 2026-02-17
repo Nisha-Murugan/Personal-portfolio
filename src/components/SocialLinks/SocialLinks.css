@@ -1,0 +1,41 @@
+/* SOCIAL ICONS WRAPPER */
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+/* ICON BUTTON */
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* IMPORTANT: svg size */
+.social-icons a svg {
+  font-size: 28px;
+}
+
+/* ORIGINAL LOGO COLORS */
+.social-icons a.insta svg {
+  color: #e1306c;   /* Instagram pink */
+}
+
+.social-icons a.github svg {
+  color: #ffffff;   /* GitHub white */
+}
+
+.social-icons a.linkedin svg {
+  color: #0a66c2;   /* LinkedIn blue */
+}
+
+/* HOVER EFFECT */
+.social-icons a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
